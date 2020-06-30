@@ -1,0 +1,10 @@
+@import url('./__container/page__container.css');
+
+.page {
+  background-color: #000;
+  color: #fff;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Inter', Arial, sans-serif;
+}

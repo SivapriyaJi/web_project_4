@@ -1,0 +1,7 @@
+.elements__like-icon {
+  transition-duration: .5s;
+}
+
+.elements__like-icon:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,10 @@
+.profile__column_add {
+  grid-area: add-button;
+}
+
+@media screen and (max-width: 877px) {
+  .profile__column_add  {
+    max-width: 100%;
+
+  }
+}

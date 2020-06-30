@@ -1,0 +1,101 @@
+@import url('./__avatar/profile__avatar.css');
+@import url('./__column/profile__column.css');
+@import url('./__heading/profile__heading.css');
+@import url('./__subheading/profile__subheading.css');
+@import url('./__heading-row/profile__heading-row.css');
+@import url('./__button/profile__button.css');
+
+/*.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 882px;
+  height: 120px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .profile {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+*/
+
+.profile {
+  max-width: 882px;
+  display: grid;
+  grid-template-columns: 168px 428px 270px;
+  grid-gap: 8px;
+  grid-template-areas:
+    "avatar profile-heading add-button"
+    "avatar profile-subheading add-button";
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    /*
+    max-width: 90%;
+    grid-template-columns: 168px 428px 200px;*/
+    max-width: 100%;
+    grid-template-columns: 19% 48% 31%;
+    grid-gap: 1%;
+  }
+}
+/*
+@media screen and (max-width: 780px) {
+  .profile {
+    max-width: 100%;
+    grid-template-columns: 18% 46% 30%;
+    grid-gap: 1%;
+    border: 2px solid red;
+  }
+}*/
+/*
+@media screen and (max-width: 680px) {
+  .profile {
+    max-width: 100%;
+    grid-template-columns: 16% 48% 30%;
+    grid-gap: 1%;
+  }
+}*/
+
+
+@media screen and (max-width: 619px) {
+  .profile {
+    max-width: 100%;
+    grid-template-columns: 22% 48% 27%;
+    grid-gap: 1%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    max-width: 100%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    grid-template-areas:
+      "avatar"
+      "profile-heading"
+      "profile-subheading"
+      "add-button";
+  }
+}
+
+
+
+

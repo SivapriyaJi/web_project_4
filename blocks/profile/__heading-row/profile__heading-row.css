@@ -1,0 +1,13 @@
+.profile__heading-row {
+  grid-area: profile-heading;
+  /*max-width: 428px;*/
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 619px) {
+  .profile__heading-row {
+   margin-left: auto;
+   margin-right: auto;
+  }
+}

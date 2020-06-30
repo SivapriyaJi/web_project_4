@@ -1,16 +1,15 @@
 # Project 4: Around The U.S.
 
-### Overview
+**Overview**
 
-* Figma
-* Images
+* Website profile that shares images of various scenic locations in the United States.
+* An edit button opens up a popup webform that allows the user to edit the name and description fields.
+* A save button in the popup webform saves any changes made in the field.
+* A close button in the popup webform closes the form without saving any changes.
 
-**Figma**
+**Technologies**
 
-* [Link to the project in Figma](https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+* Site built using html, css and javascript.
 
-**Images**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-
-Have fun with JavaScript!
+[Link to Web Project 4!](https://sivapriyaji.github.io/web_project_4//)

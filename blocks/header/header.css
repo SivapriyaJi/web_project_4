@@ -1,0 +1,23 @@
+@import url('./__hr/header__hr.css');
+@import url('./__img/header__img.css');
+
+.header {
+  max-width: 882px;
+  margin: 45px auto 58px auto;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    max-width: 100%;
+    margin-right: 0;
+    margin: 28px auto 38px auto;
+  }
+}
+
+

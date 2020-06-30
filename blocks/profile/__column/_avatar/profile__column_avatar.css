@@ -1,0 +1,13 @@
+/*.profile__column_avatar {
+  max-width: 168px;
+
+}
+
+@media screen and (max-width: 895px) {
+  .profile__column_avatar {
+    max-width: 20%;
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}*/
