@@ -5,79 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>Around the US</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
   <div class="page__container">
-    <header class="header">
-      <img class="header__img" alt="logo" src="./images/Vector.png">
-      <hr class="header__hr" />
-    </header>
+    <main></main>
+      <header class="header">
+        <img class="header__img" alt="logo" src="./images/Vector.png">
+      </header>
 
-    <section class="profile">
-      <div class="profile__column_avatar">
+      <section class="profile">
         <img class="profile__avatar" src="./images/cousteau.jpg" alt="Jacques Cousteau">
-      </div>
-      <div class="profile__column_info">
-        <div class="profile__heading-row">
-          <h1 class="profile__heading">Jacques Cousteau</h1>
-          <button class="profile__button profile__button_edit"><img src="./images/pencil.png" alt="edit"></button>
+        <div class="profile__column-info">
+          <div class="profile__heading-row">
+            <h1 class="profile__heading">Jacques Cousteau</h1>
+            <button class="profile__edit-btn" type="button"></button>
+          </div>
+          <p class="profile__subheading">Explorer</p>
         </div>
-        <p class="profile__subheading">Explorer</p>
-      </div>
-      <div class="profile__column_add">
-        <button class="profile__button profile__button_add"><img src="./images/add.png" alt="add button"></button>
-      </div>
+        <button class="profile__add-btn" type="button"></button>
       </section>
 
-      <section class="elements">
-        <ul class="elements__grid">
-          <li class="elements__card">
-            <img alt="Yosemite Valley" src="./images/yosemite-valley.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Yosemite Valley</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-          <li class="elements__card">
-            <img alt="Lake Louise" src="./images/lake-louise.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Lake Louise</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-          <li class="elements__card">
-            <img alt="Bald Mountains" src="./images/bald-mountains.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Bald Mountains</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-          <li class="elements__card">
-            <img alt="Latemar" src="./images/latemar.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Latemar</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-          <li class="elements__card">
-            <img alt="Vanois National" src="./images/vanois-national.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Vanois National</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-          <li class="elements__card">
-            <img alt="Lago di Braies" src="./images/lago-di-braies.jpg" class="elements__img">
-            <div class="elements__description">
-              <h2 class="elements__heading">Lago di Braies</h2>
-              <img src="./images/heart.svg" alt="like-icon" class="elements__like-icon">
-            </div>
-          </li>
-      </ul>
-      </section>
+        <section class="elements">
+          <ul class="elements__grid">
+            <li class="elements__card"><!--I don't understand what you mean with "Each place card can be made a separate BEM block." Do you mean create it just as "element" block?-->
+              <img alt="Yosemite Valley" src="./images/yosemite-valley.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Yosemite Valley</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+            <li class="elements__card">
+              <img alt="Lake Louise" src="./images/lake-louise.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Lake Louise</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+            <li class="elements__card">
+              <img alt="Bald Mountains" src="./images/bald-mountains.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Bald Mountains</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+            <li class="elements__card">
+              <img alt="Latemar" src="./images/latemar.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Latemar</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+            <li class="elements__card">
+              <img alt="Vanois National" src="./images/vanois-national.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Vanois National...</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+            <li class="elements__card">
+              <img alt="Lago di Braies" src="./images/lago-di-braies.jpg" class="elements__img">
+              <div class="elements__description">
+                <h2 class="elements__heading">Lago di Braies</h2>
+                <button class ="elements__like-btn" type="button"></button>
+              </div>
+            </li>
+        </ul>
+        </section>
+
+    </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Around The U.S.</p>
@@ -86,9 +84,9 @@
 
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close-button"><img src="./images/Close-Icon.svg" alt="close-icon"></button>
+        <button class="popup__close-button" type="button"></button>
         <h2 class="popup__heading">Edit profile</h2>
-        <form action="#" class="popup__form">
+        <form action="#" class="popup__form" name="edit-profile">
           <input class="popup__input popup__input_type_name" type="text" name="name" value="Jacques Cousteau">
           <input class="popup__input popup__input_type_desc" type="text" name="description" value="Explorer">
 

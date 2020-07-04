@@ -1,0 +1,55 @@
+/*.profile__column-add {
+  grid-area: add-button;
+}
+
+@media screen and (max-width: 877px) {
+  .profile__column-add  {
+    max-width: 100%;
+  }
+}*/
+
+.profile__add-btn {
+  grid-area: add-button;
+  background: url('../../../images/add.svg'), rgb( 0, 0, 0);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding: 14px 64px;
+  width: 150px;
+  height: 50px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-left: 115px;
+  border: 2px solid #FFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition-duration: .5s;
+  cursor: pointer;
+  justify-self: end;
+}
+
+.profile__add-btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 900px) {
+  .profile__add-btn {
+    margin-left: 25%;
+  }
+}
+
+@media screen and (max-width: 877px) {
+  .profile__add-btn {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .profile__add-btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 13px 134px;
+    width: 282px;
+    height: 50px;
+  }
+}
+

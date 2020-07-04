@@ -19,29 +19,42 @@
 }
 */
 
-.profile__button_edit {
+.profile__edit-btn {
   grid-area: edit-button;
+  background-image: url('../../../images/pencil.svg');
+  background-color: rgb(0, 0, 0);
+  background-size: 10px 10px;
+  background-origin: content-box;
+  padding: 7px;
+  background-repeat: no-repeat;
+  overflow: hidden;
   width: 24px;
   height: 24px;
   margin-top: 19px;
   margin-left: 31px;
   border: 1px solid #FFF;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+
+.profile__edit-btn:hover {
+ opacity: 0.5;
 }
 
 @media screen and (max-width: 895px) {
-  .profile__button_edit {
+  .profile__edit-btn {
     margin-left: 24px;
   }
 }
 
 @media screen and (max-width: 806px) {
-  .profile__button_edit {
+  .profile__edit-btn {
     margin-left: 18px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .profile__button_edit {
+  .profile__edit-btn {
     margin-left: 6px;
   }
 }

@@ -1,4 +1,4 @@
-.profile__column_info {
+.profile__column-info {
   max-width: 428px;
   height: 77px;
   margin-top: auto;
@@ -6,17 +6,24 @@
   margin-left: 0;
   justify-self: start;
   align-items: flex-start;
-
 }
 
 @media screen and (max-width: 850px) {
-  .profile__column_info {
+  .profile__column-info {
     max-width: 400px;
   }
 }
 
+@media screen and (max-width: 610px) {
+  .profile__column-info {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (max-width: 320px) {
-  .profile__column_info {
+  .profile__column-info {
     max-width: 320px;
   }
 }

@@ -9,4 +9,20 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  transition-duration: .5s;
+  cursor: pointer;
+  justify-self: end;
 }
+
+.popup__submit-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 429px) {
+  .popup__submit-button {
+   max-width: 90%;
+   margin-left: 5%;
+   margin-right: 5%;
+  }
+}
+

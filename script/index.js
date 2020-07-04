@@ -1,10 +1,18 @@
-const editButton = document.querySelector('.profile__button_edit');
+const editButton = document.querySelector('.profile__edit-btn');
 const closeButton = document.querySelector('.popup__close-button');
 const popup = document.querySelector('.popup');
 const form = document.querySelector('.popup__form');
 
+const inputName = document.querySelector('.popup__input_type_name');
+const inputDesc = document.querySelector('.popup__input_type_desc');
+
+const profileName = document.querySelector('.profile__heading');
+const profileDesc = document.querySelector('.profile__subheading');
+
 function togglePopup() {
   popup.classList.toggle('popup_is-open');
+  document.querySelector('.popup__input_type_name').value = 'Jacques Cousteau';
+  document.querySelector('.popup__input_type_desc').value = 'Explorer';
   }
 
   editButton.addEventListener('click', togglePopup)
@@ -14,15 +22,10 @@ function togglePopup() {
  form.addEventListener('submit', (e) =>  {
     e.preventDefault();
 
-    const inputName = document.querySelector('.popup__input_type_name');
-    const inputDesc = document.querySelector('.popup__input_type_desc');
-
-    const profileName = document.querySelector('.profile__heading');
-    const profileDesc = document.querySelector('.profile__subheading');
-
     profileName.textContent = inputName.value;
     profileDesc.textContent = inputDesc.value;
 
     togglePopup();
 
   })
+

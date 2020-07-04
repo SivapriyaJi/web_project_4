@@ -1,10 +1,12 @@
-@import url('./__hr/header__hr.css');
+
 @import url('./__img/header__img.css');
 
 .header {
   max-width: 882px;
   margin: 45px auto 58px auto;
+  border-bottom: 1px solid rgb(84, 84, 84, 0.7);
 }
+
 
 @media screen and (max-width: 900px) {
   .header {
