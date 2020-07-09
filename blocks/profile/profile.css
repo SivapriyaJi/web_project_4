@@ -6,16 +6,7 @@
 @import url('./__add-btn/profile__add-btn.css');
 @import url('./__column-info/profile__column-info.css');
 
-.profile {
-  max-width: 882px;
-  display: grid;
-  grid-template-columns: 168px 428px 270px;
-  grid-gap: 6px;
-  grid-template-areas:
-    "avatar profile-heading add-button"
-    "avatar profile-subheading add-button";
-}
-
+/*
 @media screen and (max-width: 900px) {
   .profile {
     max-width: 100%;
@@ -41,21 +32,42 @@
   }
 }*/
 
-@media screen and (max-width: 610px) {
+
+
+
+.profile {
+  display: grid;
+  grid-template-columns: 120px minmax(auto, 420px) 1fr 155px;
+  grid-gap: 6px;
+  align-items: center;
+  max-width: 882px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    display: grid;
+    grid-template-columns: 15% minmax(auto, 54%) 24px 28%;
+    grid-gap: 1%;
+    align-items: center;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 617px) {
   .profile {
     max-width: 100%;
     display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: 1fr;
-    grid-gap: 8px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "avatar"
-      "profile-heading"
-      "profile-subheading"
-      "add-button";
+      "avatar avatar avatar"
+      ". heading-row edit"
+      "add add add";
   }
 }
+
+
 
 
 

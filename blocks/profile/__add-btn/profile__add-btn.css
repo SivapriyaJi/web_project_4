@@ -1,50 +1,42 @@
-/*.profile__column-add {
-  grid-area: add-button;
-}
-
-@media screen and (max-width: 877px) {
-  .profile__column-add  {
-    max-width: 100%;
-  }
-}*/
-
 .profile__add-btn {
-  grid-area: add-button;
   background: url('../../../images/add.svg'), rgb( 0, 0, 0);
   background-repeat: no-repeat;
   background-origin: content-box;
   padding: 14px 64px;
+  margin-right: 19px;
   width: 150px;
   height: 50px;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  margin-left: 115px;
   border: 2px solid #FFF;
   box-sizing: border-box;
   border-radius: 2px;
   transition-duration: .5s;
   cursor: pointer;
-  justify-self: end;
+  justify-self: flex-end;
 }
 
 .profile__add-btn:hover {
   opacity: 0.6;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   .profile__add-btn {
-    margin-left: 25%;
+    width: 140px;
+    height: 40px;
+    padding: 9px 57px;
+    /*margin-right: 8px;*/
   }
 }
 
-@media screen and (max-width: 877px) {
+@media screen and (max-width: 685px) {
   .profile__add-btn {
-    margin-left: 0;
+    width: 120px;
+    padding: 9px 50px;
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 617px) {
   .profile__add-btn {
+    grid-area: add;
     margin-left: auto;
     margin-right: auto;
     padding: 13px 134px;
@@ -52,4 +44,3 @@
     height: 50px;
   }
 }
-

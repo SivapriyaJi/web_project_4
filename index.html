@@ -11,26 +11,25 @@
 
 <body class="page">
   <div class="page__container">
-    <main></main>
       <header class="header">
         <img class="header__img" alt="logo" src="./images/Vector.png">
       </header>
 
+  <main> <!-- I didn't realize VSC had automatically added the main closing tag, but I did have the open tag in the wrong place-->
+
       <section class="profile">
         <img class="profile__avatar" src="./images/cousteau.jpg" alt="Jacques Cousteau">
-        <div class="profile__column-info">
-          <div class="profile__heading-row">
-            <h1 class="profile__heading">Jacques Cousteau</h1>
-            <button class="profile__edit-btn" type="button"></button>
-          </div>
+        <div class="profile__heading-row">
+          <h1 class="profile__heading">Jacques Cousteau</h2>
           <p class="profile__subheading">Explorer</p>
         </div>
+        <button class="profile__edit-btn" type="button"></button>
         <button class="profile__add-btn" type="button"></button>
       </section>
 
         <section class="elements">
           <ul class="elements__grid">
-            <li class="elements__card"><!--I don't understand what you mean with "Each place card can be made a separate BEM block." Do you mean create it just as "element" block?-->
+            <li class="elements__card">
               <img alt="Yosemite Valley" src="./images/yosemite-valley.jpg" class="elements__img">
               <div class="elements__description">
                 <h2 class="elements__heading">Yosemite Valley</h2>
@@ -75,7 +74,7 @@
         </ul>
         </section>
 
-    </main>
+  </main>
 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Around The U.S.</p>

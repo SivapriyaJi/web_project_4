@@ -11,8 +11,8 @@ const profileDesc = document.querySelector('.profile__subheading');
 
 function togglePopup() {
   popup.classList.toggle('popup_is-open');
-  document.querySelector('.popup__input_type_name').value = 'Jacques Cousteau';
-  document.querySelector('.popup__input_type_desc').value = 'Explorer';
+  document.querySelector('.popup__input_type_name').value = profileName.textContent;
+  document.querySelector('.popup__input_type_desc').value = profileDesc.textContent;
   }
 
   editButton.addEventListener('click', togglePopup)

@@ -1,45 +1,23 @@
-/*.profile__avatar {
-  max-width: 120px;
-  margin-right: 48px;
-  border-radius: 50%;
-}
-
-@media screen and (max-width: 895px) {
-  .profile__avatar {
-    max-width: 75%;
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .profile__avatar {
-    max-width: 120px;
-    margin: 32px 100px 14px 100px;
-  }
-}
-*/
-
 .profile__avatar {
-  grid-area: avatar;
-  max-width: 120px;
-  margin-right: 48px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
 }
 
-
-@media screen and (max-width: 895px) {
+@media screen and (max-width: 650px) {
   .profile__avatar {
-   max-width: 80%;
-  margin-left: 16px;
+    width: 100px;
+    height: 100px;
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 617px) {
   .profile__avatar {
-    max-width: 168px;
+    grid-area: avatar;
+    width: 168px;
+    height: 168px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
-
   }
 }
