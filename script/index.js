@@ -11,13 +11,15 @@ const profileDesc = document.querySelector('.profile__subheading');
 
 function togglePopup() {
   popup.classList.toggle('popup_is-open');
-  document.querySelector('.popup__input_type_name').value = profileName.textContent;
-  document.querySelector('.popup__input_type_desc').value = profileDesc.textContent;
+
+  if (popup.classList.contains('popup_is-open')) {
+    inputName.value = profileName.textContent;
+    inputDesc.value = profileDesc.textContent;
+    }
   }
 
-  editButton.addEventListener('click', togglePopup)
-  closeButton.addEventListener('click', togglePopup)
-
+editButton.addEventListener('click', togglePopup)
+closeButton.addEventListener('click', togglePopup)
 
  form.addEventListener('submit', (e) =>  {
     e.preventDefault();
@@ -28,4 +30,3 @@ function togglePopup() {
     togglePopup();
 
   })
-

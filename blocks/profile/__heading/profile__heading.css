@@ -40,7 +40,23 @@
     line-height: 32px;
     margin-bottom: 14px;
     text-align: center;
-    max-width: 100%;
+    max-width: 452px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile__heading {
+    max-width:352px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile__heading {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 252px;
   }
 }
 
@@ -50,6 +66,7 @@
     line-height: 56px;
     max-width: 269px;
     margin-bottom: 7px;
+    max-width: 267px;
   }
 }
 
