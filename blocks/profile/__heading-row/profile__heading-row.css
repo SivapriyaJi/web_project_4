@@ -2,18 +2,36 @@
   margin-left: 30px;
 }
 
-@media screen and (max-width: 860px) {
+
+@media screen and (max-width: 880px) {
   .profile__heading-row {
-    max-width: 390px;
+    max-width: 360px;
   }
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 800px) {
   .profile__heading-row {
     max-width: 318px;
   }
 }
 
+@media screen and (max-width: 720px) {
+  .profile__heading-row {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .profile__heading-row {
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .profile__heading-row {
+    max-width: 260px;
+  }
+}
 
 @media screen and (max-width: 617px) {
   .profile__heading-row {

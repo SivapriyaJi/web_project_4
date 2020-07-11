@@ -20,16 +20,23 @@
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .profile__heading {
     font-size: 34px;
     line-height: 40px;
   }
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 720px) {
   .profile__heading {
     font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .profile__heading {
+    font-size: 28px;
     line-height: 38px;
   }
 }
