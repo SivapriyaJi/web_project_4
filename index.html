@@ -15,7 +15,7 @@
         <img class="header__img" alt="logo" src="./images/logo.svg">
       </header>
 
-  <main> <!-- I didn't realize VSC had automatically added the main closing tag, but I did have the open tag in the wrong place-->
+  <main>
 
       <section class="profile">
         <img class="profile__avatar" src="./images/cousteau.jpg" alt="Jacques Cousteau">
@@ -29,49 +29,8 @@
 
         <section class="elements">
           <ul class="elements__grid">
-            <li class="elements__card">
-              <img alt="Yosemite Valley" src="./images/yosemite-valley.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Yosemite Valley</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img alt="Lake Louise" src="./images/lake-louise.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Lake Louise</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img alt="Bald Mountains" src="./images/bald-mountains.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Bald Mountains</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img alt="Latemar" src="./images/latemar.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Latemar</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img alt="Vanois National" src="./images/vanois-national.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Vanois National...</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-            <li class="elements__card">
-              <img alt="Lago di Braies" src="./images/lago-di-braies.jpg" class="elements__img">
-              <div class="elements__description">
-                <h2 class="elements__heading">Lago di Braies</h2>
-                <button class ="elements__like-btn" type="button"></button>
-              </div>
-            </li>
-        </ul>
+
+          </ul>
         </section>
 
   </main>
@@ -96,6 +55,18 @@
 
 
   </div>
+
+  <template class="card-template">
+    <li class="elements__card">
+      <button class ="elements__delete-btn" type="button"></button>
+      <img alt="" src="" class="elements__img">
+       <!-- <div style="" class="elements__img"></div>-->
+      <div class="elements__description">
+        <h2 class="elements__heading"></h2>
+        <button class ="elements__like-btn" type="button"></button>
+      </div>
+    </li>
+  </template>
 
   <script src="./script/index.js"></script>
 </body>
