@@ -64,14 +64,14 @@ closeButton.addEventListener('click', togglePopup)
     const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__card");
     const cardElement = cardTemplate.cloneNode(true);
 
-    const cardImage = cardElement.querySelector(".elements__image");
+    const cardImage = cardElement.querySelector(".elements__img");
     const cardTitle = cardElement.querySelector(".elements__heading");
     const cardLikeButton = cardElement.querySelector(".elements__like-btn");
     const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
 
     cardTitle.textContent = data.name;
-    cardImage.style.backgroundImage = "url($(data.link)";
-    //cardImage.src = data.link;
+    //cardImage.style.backgroundImage = "url($(data.link)";
+    cardImage.src = data.link;
 
     const list = document.querySelector(".elements__grid");
 
