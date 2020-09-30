@@ -159,8 +159,8 @@ closeButton.addEventListener('click', togglePopup)
     })*/
 
     cardImage.addEventListener('click', () => {
-     //togglePopup(imageModalWindow)
-     imageModalWindow.classList.add('popup_is-open')
+     togglePopup(imageModalWindow)
+     //imageModalWindow.classList.add('popup_is-open')
     })
 
    /* imagePopupCloseButton.addEventListener('click', () => {
