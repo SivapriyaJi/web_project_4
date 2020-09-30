@@ -3,9 +3,6 @@ const editProfileModalWindow = document.querySelector('.popup_type_edit-profile'
 const addCardModalWindow = document.querySelector('.popup_type_add-card');
 const imageModalWindow = document.querySelector('.popup_type_image');
 
-
-//const imageModalWindow = document.querySelector('.popup_type_image');
-
 // open buttons
 const editButton = document.querySelector('.profile__edit-btn');
 const addCardModalButton = document.querySelector('.profile__add-btn');
@@ -17,44 +14,38 @@ const imagePopupCloseButton = imageModalWindow.querySelector('.popup__close');
 
 //other DOM elements
 const form = document.querySelector('.popup__form');
-//const addCardSubmitButton = addCardModalWindow.querySelector('.popup__button');
+
 
 // profile
 const profileName = document.querySelector('.profile__heading');
 const profileDesc = document.querySelector('.profile__subheading');
-//const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
+
 
 // form inputs
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
-//const cardLink = document.querySelector('.popup__input_type_url');
-//const cardTitle = document.querySelector('.popup__input_type_card-title');
 
-//image
-//const popupImage = imageModalWindow.querySelector('.popup__image');
-
-//let activeModal = null;
 
   /* ~~~code from livecoding~~~*/
   function togglePopup(modal) {
     popup.classList.toggle('popup_is-open');
   }
 
- editButton.addEventListener('click', () => {
+ /*editButton.addEventListener('click', () => {
     editProfileModalWindow.classList.add('popup_is-open')
+  });*/
+
+  editButton.addEventListener('click', () => {
+    togglePopup(editProfileModalWindow);
   });
 
- /* editButton.addEventListener('click', () => {
+ closeButton.addEventListener('click', () => {
     togglePopup(editProfileModalWindow);
-  });*/
+  });
 
- /* closeButton.addEventListener('click', () => {
-    togglePopup(editProfileModalWindow);
-  });*/
-
-  closeButton.addEventListener('click', () => {
+  /*closeButton.addEventListener('click', () => {
     editProfileModalWindow.classList.remove('popup_is-open')
-  });
+  });*/
 
   function formSubmitHandler(evt) {
     evt.preventDefault();
@@ -74,16 +65,20 @@ const inputDesc = document.querySelector('.popup__input_type_desc');
   });
 
 
-addCardModalButton.addEventListener('click', () => {
+/*addCardModalButton.addEventListener('click', () => {
     addCardModalWindow.classList.add('popup_is-open')
+  });*/
+
+  addCardModalButton.addEventListener('click', () => {
+    togglePopup(addCardModalWindow)
   });
 
-  /*addCardModalButton.addEventListener('click', () => {
-    togglePopup(addCardModalWindow)
+ /* closeAddCardModalButton.addEventListener('click', () => {
+    addCardModalWindow.classList.remove('popup_is-open')
   });*/
 
   closeAddCardModalButton.addEventListener('click', () => {
-    addCardModalWindow.classList.remove('popup_is-open')
+    togglePopup(addCardModalWindow)
   });
 
 
