@@ -40,7 +40,7 @@
     </footer>
 
 
-    <div class="popup">
+    <div class="popup popup_type_edit-profile">
       <div class="popup__container">
         <button class="popup__close-button" type="button"></button>
         <h2 class="popup__heading">Edit profile</h2>
@@ -53,6 +53,28 @@
       </div>
     </div>
 
+    <div class="popup popup_type_add-card">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <h2 class="popup__heading">New place</h2>
+        <form action="#" class="popup__form" name="edit-profile">
+          <input class="popup__input popup__input_type_card-title" type="text" name="name" value="Title">
+          <input class="popup__input popup__input_type_url" type="url" name="description" value="Image link">
+
+          <button class="popup__submit-button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_image">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <figure class="popup__figure">
+          <img src="" class="popup__image" alt="">
+          <figcaption class="popup__image-title"></figcaption>
+        </figure>
+      </div>
+    </div>
 
   </div>
 

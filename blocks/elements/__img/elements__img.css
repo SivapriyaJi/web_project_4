@@ -1,6 +1,11 @@
 .elements__img {
   border-radius: 10px 10px 0px 0px;
-  width: 100%;
+  /*width: 100%;
+  height: 80%;*/
+  max-width: 100%;
+  min-height: 84%;
+  object-fit: fill;
+  margin-top: 0;
 }
 
 /*original css

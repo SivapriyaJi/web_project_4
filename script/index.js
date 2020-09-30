@@ -1,24 +1,107 @@
+// wrappers
+const editProfileModalWindow = document.querySelector('.popup_type_edit-profile');
+const addCardModalWindow = document.querySelector('.popup_type_add-card');
+const imageModalWindow = document.querySelector('.popup_type_image');
+
+
+//const imageModalWindow = document.querySelector('.popup_type_image');
+
+// open buttons
 const editButton = document.querySelector('.profile__edit-btn');
-const closeButton = document.querySelector('.popup__close-button');
-const popup = document.querySelector('.popup');
+const addCardModalButton = document.querySelector('.profile__add-btn');
+
+// close buttons
+const closeButton = editProfileModalWindow.querySelector('.popup__close-button');
+const closeAddCardModalButton = addCardModalWindow.querySelector('.popup__close-button');
+const imagePopupCloseButton = imageModalWindow.querySelector('.popup__close');
+
+//other DOM elements
 const form = document.querySelector('.popup__form');
+//const addCardSubmitButton = addCardModalWindow.querySelector('.popup__button');
 
-const inputName = document.querySelector('.popup__input_type_name');
-const inputDesc = document.querySelector('.popup__input_type_desc');
-
+// profile
 const profileName = document.querySelector('.profile__heading');
 const profileDesc = document.querySelector('.profile__subheading');
+//const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
 
+// form inputs
+const inputName = document.querySelector('.popup__input_type_name');
+const inputDesc = document.querySelector('.popup__input_type_desc');
+//const cardLink = document.querySelector('.popup__input_type_url');
+//const cardTitle = document.querySelector('.popup__input_type_card-title');
+
+//image
+//const popupImage = imageModalWindow.querySelector('.popup__image');
+
+//let activeModal = null;
+
+  /* ~~~code from livecoding~~~*/
+  function togglePopup(modal) {
+    popup.classList.toggle('popup_is-open');
+  }
+
+ editButton.addEventListener('click', () => {
+    editProfileModalWindow.classList.add('popup_is-open')
+  });
+
+ /* editButton.addEventListener('click', () => {
+    togglePopup(editProfileModalWindow);
+  });*/
+
+ /* closeButton.addEventListener('click', () => {
+    togglePopup(editProfileModalWindow);
+  });*/
+
+  closeButton.addEventListener('click', () => {
+    editProfileModalWindow.classList.remove('popup_is-open')
+  });
+
+  function formSubmitHandler(evt) {
+    evt.preventDefault();
+    profileName.textContent = inputName.value;
+    profileDesc.textContent = inputDesc.value;
+
+    togglePopup(editProfileModalWindow);
+  };
+
+  form.addEventListener('submit', formSubmitHandler);
+    editButton.addEventListener('click', () => {
+      if (editProfileModalWindow.classList.contains('popup_is-open')) {
+        inputName.value = profileName.textContent;
+        inputDesc.value = profileDesc.textContent;
+  }
+    togglePopup(editProfileModalWindow);
+  });
+
+
+addCardModalButton.addEventListener('click', () => {
+    addCardModalWindow.classList.add('popup_is-open')
+  });
+
+  /*addCardModalButton.addEventListener('click', () => {
+    togglePopup(addCardModalWindow)
+  });*/
+
+  closeAddCardModalButton.addEventListener('click', () => {
+    addCardModalWindow.classList.remove('popup_is-open')
+  });
+
+
+/* ~~~~~~const popup = document.querySelector('.popup');  this should be deleted, just put back to test*/
+/*Original togglepopup code
 function togglePopup() {
   popup.classList.toggle('popup_is-open');
 
-  if (popup.classList.contains('popup_is-open')) {
+  if (popup.classList.
+    contains('popup_is-open')) {
     inputName.value = profileName.textContent;
     inputDesc.value = profileDesc.textContent;
     }
   }
 
 editButton.addEventListener('click', togglePopup)
+
+
 closeButton.addEventListener('click', togglePopup)
 
  form.addEventListener('submit', (e) =>  {
@@ -28,9 +111,7 @@ closeButton.addEventListener('click', togglePopup)
     profileDesc.textContent = inputDesc.value;
 
     togglePopup();
-
-  })
-
+  })*/
 
   const initialCards = [
     {
@@ -59,9 +140,11 @@ closeButton.addEventListener('click', togglePopup)
     }
   ];
 
+  const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__card");
+  const list = document.querySelector(".elements__grid");
 
   initialCards.forEach(data => {
-    const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__card");
+
     const cardElement = cardTemplate.cloneNode(true);
 
     const cardImage = cardElement.querySelector(".elements__img");
@@ -70,10 +153,24 @@ closeButton.addEventListener('click', togglePopup)
     const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
 
     cardTitle.textContent = data.name;
-    //cardImage.style.backgroundImage = "url($(data.link)";
     cardImage.src = data.link;
 
-    const list = document.querySelector(".elements__grid");
+    /*card.LikeButton.addEventListener('click', () => {
+      //changeLikeState()
+    })
+
+    cardDeleteButton.addEventListener('click', () => {
+      //handleCardDeleteClick()
+    })*/
+
+    cardImage.addEventListener('click', () => {
+     //togglePopup(imageModalWindow)
+     imageModalWindow.classList.add('popup_is-open')
+    })
+
+   /* imagePopupCloseButton.addEventListener('click', () => {
+      imageModalWindow.classList.remove('popup_is-open')
+    })*/
 
     list.prepend(cardElement);
   });
