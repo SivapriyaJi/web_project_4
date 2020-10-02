@@ -15,31 +15,20 @@ const imagePopupCloseButton = imageModalWindow.querySelector('.popup__image-clos
 //other DOM elements
 const form = document.querySelector('.popup__form');
 
-
 // profile
 const profileName = document.querySelector('.profile__heading');
 const profileDesc = document.querySelector('.profile__subheading');
-
 
 // form inputs
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
 
+//card buttons
+const cardLikeButton = document.querySelector('.elements__like-btn');
+
 function togglePopup(modal) {
     modal.classList.toggle('popup_is-open');
   }
-
- /*editButton.addEventListener('click', () => {
-    editProfileModalWindow.classList.add('popup_is-open')
-    //togglePopup(editProfileModalWindow)
-    console.log("hello");
-  });*/
-
-  /*editButton.addEventListener('click', () => {
-    editProfileModalWindow.classList.add('popup_is-open')
-    //togglePopup(editProfileModalWindow)
-  });*/
-
 
 
   function formSubmitHandler(evt) {
@@ -118,13 +107,17 @@ addCardModalButton.addEventListener('click', () => {
     cardTitle.textContent = data.name;
     cardImage.src = data.link;
 
-    /*card.LikeButton.addEventListener('click', () => {
-      //changeLikeState()
+    function toggleLike() {
+      cardLikeButton.classList.toggle('elements__like-btn_active');
+    };
+
+    cardLikeButton.addEventListener('click', () => {
+      toggleLike();
     })
 
     cardDeleteButton.addEventListener('click', () => {
       //handleCardDeleteClick()
-    })*/
+    })
 
     cardImage.addEventListener('click', () => {
       const popupImage = imageModalWindow.querySelector('.popup__image');

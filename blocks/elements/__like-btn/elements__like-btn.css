@@ -15,6 +15,7 @@
 
 .elements__like-btn_active {
   opacity: 1;
+  border: none;
   background: url('../../../images/bl-heart.svg') center no-repeat;
 }
 
