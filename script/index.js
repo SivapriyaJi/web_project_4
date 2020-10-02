@@ -116,7 +116,7 @@ addCardModalButton.addEventListener('click', () => {
     })
 
     cardDeleteButton.addEventListener('click', () => {
-      //handleCardDeleteClick()
+      cardElement.remove();
     })
 
     cardImage.addEventListener('click', () => {
