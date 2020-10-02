@@ -10,7 +10,7 @@ const addCardModalButton = document.querySelector('.profile__add-btn');
 // close buttons
 const closeButton = editProfileModalWindow.querySelector('.popup__close-button');
 const closeAddCardModalButton = addCardModalWindow.querySelector('.popup__close-button');
-const imagePopupCloseButton = imageModalWindow.querySelector('.popup__close');
+const imagePopupCloseButton = imageModalWindow.querySelector('.popup__image-close-btn');
 
 //other DOM elements
 const form = document.querySelector('.popup__form');
@@ -25,27 +25,22 @@ const profileDesc = document.querySelector('.profile__subheading');
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
 
-
-  /* ~~~code from livecoding~~~*/
-  function togglePopup(modal) {
-    popup.classList.toggle('popup_is-open');
+function togglePopup(modal) {
+    modal.classList.toggle('popup_is-open');
   }
 
  /*editButton.addEventListener('click', () => {
     editProfileModalWindow.classList.add('popup_is-open')
+    //togglePopup(editProfileModalWindow)
+    console.log("hello");
   });*/
 
-  editButton.addEventListener('click', () => {
-    togglePopup(editProfileModalWindow);
-  });
-
- closeButton.addEventListener('click', () => {
-    togglePopup(editProfileModalWindow);
-  });
-
-  /*closeButton.addEventListener('click', () => {
-    editProfileModalWindow.classList.remove('popup_is-open')
+  /*editButton.addEventListener('click', () => {
+    editProfileModalWindow.classList.add('popup_is-open')
+    //togglePopup(editProfileModalWindow)
   });*/
+
+
 
   function formSubmitHandler(evt) {
     evt.preventDefault();
@@ -64,49 +59,22 @@ const inputDesc = document.querySelector('.popup__input_type_desc');
     togglePopup(editProfileModalWindow);
   });
 
-
-/*addCardModalButton.addEventListener('click', () => {
-    addCardModalWindow.classList.add('popup_is-open')
-  });*/
-
-  addCardModalButton.addEventListener('click', () => {
-    togglePopup(addCardModalWindow)
+  closeButton.addEventListener('click', () => {
+    //editProfileModalWindow.classList.remove('popup_is-open')
+     togglePopup(editProfileModalWindow)
   });
 
- /* closeAddCardModalButton.addEventListener('click', () => {
-    addCardModalWindow.classList.remove('popup_is-open')
-  });*/
+addCardModalButton.addEventListener('click', () => {
+    //addCardModalWindow.classList.add('popup_is-open')
+    togglePopup(addCardModalWindow)
+  });
 
   closeAddCardModalButton.addEventListener('click', () => {
+    //addCardModalWindow.classList.remove('popup_is-open')
     togglePopup(addCardModalWindow)
   });
 
 
-/* ~~~~~~const popup = document.querySelector('.popup');  this should be deleted, just put back to test*/
-/*Original togglepopup code
-function togglePopup() {
-  popup.classList.toggle('popup_is-open');
-
-  if (popup.classList.
-    contains('popup_is-open')) {
-    inputName.value = profileName.textContent;
-    inputDesc.value = profileDesc.textContent;
-    }
-  }
-
-editButton.addEventListener('click', togglePopup)
-
-
-closeButton.addEventListener('click', togglePopup)
-
- form.addEventListener('submit', (e) =>  {
-    e.preventDefault();
-
-    profileName.textContent = inputName.value;
-    profileDesc.textContent = inputDesc.value;
-
-    togglePopup();
-  })*/
 
   const initialCards = [
     {
@@ -159,13 +127,20 @@ closeButton.addEventListener('click', togglePopup)
     })*/
 
     cardImage.addEventListener('click', () => {
-     togglePopup(imageModalWindow)
+      const popupImage = imageModalWindow.querySelector('.popup__image');
+      const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
+
+      popupImage.src = data.link;
+      popupImageTitle.textContent = data.name;
+
+      togglePopup(imageModalWindow)
      //imageModalWindow.classList.add('popup_is-open')
     })
 
-   /* imagePopupCloseButton.addEventListener('click', () => {
-      imageModalWindow.classList.remove('popup_is-open')
-    })*/
-
     list.prepend(cardElement);
+  });
+
+  imagePopupCloseButton.addEventListener('click', () => {
+    //addCardModalWindow.classList.remove('popup_is-open')
+    togglePopup(imageModalWindow)
   });

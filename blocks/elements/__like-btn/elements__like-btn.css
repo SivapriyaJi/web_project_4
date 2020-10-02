@@ -13,4 +13,9 @@
   opacity: 0.6;
 }
 
+.elements__like-btn_active {
+  opacity: 1;
+  background: url('../../../images/bl-heart.svg') center no-repeat;
+}
+
 
