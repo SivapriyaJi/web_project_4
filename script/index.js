@@ -148,7 +148,6 @@ addCardModalButton.addEventListener('click', () => {
   });
 
   imagePopupCloseButton.addEventListener('click', () => {
-    //addCardModalWindow.classList.remove('popup_is-open')
     togglePopup(imageModalWindow)
   });
 
@@ -165,4 +164,19 @@ const addCardHandler = (e) => {
   toggleModalWindow(addCardModalWindow);
 };
 
+/*addCardSubmitButton.addEventListener('click', event => {
+  event.preventDefault();
 
+  list.prepend(newCard(cardTitle.value, cardLink.value));
+  cardTitle.value = "";
+  cardLink.value = "";
+  toggleModalWindow(addCardModalWindow);
+});*/
+
+addCardSubmitButton.addEventListener('submit', formSubmitHandler);
+addCardSubmitButton.addEventListener('click', () => {
+  list.prepend(newCard(cardTitle.value, cardLink.value));
+  cardTitle.value = "";
+  cardLink.value = "";
+  toggleModalWindow(addCardModalWindow);
+});
