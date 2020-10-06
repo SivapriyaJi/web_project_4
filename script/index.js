@@ -23,14 +23,28 @@ const profileDesc = document.querySelector('.profile__subheading');
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
 
-//card buttons
+//card
 const cardLikeButton = document.querySelector('.elements__like-btn');
+const addCardSubmitButton = addCardModalWindow.querySelector('.popup__submit-button');
+
+const cardTitle = addCardModalWindow.querySelector('.popup__input_type_card-title');
+const cardLink = addCardModalWindow.querySelector('.popup__input_type_url');
 
 function togglePopup(modal) {
     modal.classList.toggle('popup_is-open');
-  }
 
+  if (editProfileModalWindow.classList.contains('popup_is-open')) {
+    inputName.value = profileName.textContent;
+    inputDesc.value = profileDesc.textContent;
+    }
 
+  /*if (addCardModalWindow.classList.contains('popup_is-open')) {
+    inputName.value = profileName.textContent;
+    inputDesc.value = profileDesc.textContent;
+    }*/
+}
+
+//profile form submit handler
   function formSubmitHandler(evt) {
     evt.preventDefault();
     profileName.textContent = inputName.value;
@@ -50,12 +64,12 @@ function togglePopup(modal) {
 
   closeButton.addEventListener('click', () => {
     //editProfileModalWindow.classList.remove('popup_is-open')
-     togglePopup(editProfileModalWindow)
+     togglePopup(editProfileModalWindow);
   });
 
 addCardModalButton.addEventListener('click', () => {
     //addCardModalWindow.classList.add('popup_is-open')
-    togglePopup(addCardModalWindow)
+    togglePopup(addCardModalWindow);
   });
 
   closeAddCardModalButton.addEventListener('click', () => {
@@ -113,11 +127,11 @@ addCardModalButton.addEventListener('click', () => {
 
     cardLikeButton.addEventListener('click', () => {
       toggleLike();
-    })
+    });
 
     cardDeleteButton.addEventListener('click', () => {
       cardElement.remove();
-    })
+    });
 
     cardImage.addEventListener('click', () => {
       const popupImage = imageModalWindow.querySelector('.popup__image');
@@ -137,3 +151,18 @@ addCardModalButton.addEventListener('click', () => {
     //addCardModalWindow.classList.remove('popup_is-open')
     togglePopup(imageModalWindow)
   });
+
+  //add card handler
+const addCardHandler = (e) => {
+  e.preventDefault();
+  const cardInstance = newCard( {
+    name: cardTitle.value, link: cardLink.value
+  }, '.card-template');
+
+  const cardElement = cardInstance.createCard();
+
+  list.prepend(cardElement);
+  toggleModalWindow(addCardModalWindow);
+};
+
+
