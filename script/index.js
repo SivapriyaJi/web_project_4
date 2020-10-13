@@ -22,6 +22,9 @@ const profileDesc = document.querySelector('.profile__subheading');
 // form inputs
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
+const inputCardTitle = document.querySelector('.popup__input_type_card-title');
+const inputCardLink = document.querySelector('.popup__input_type_url');
+
 
 //card
 const cardLikeButton = document.querySelector('.elements__like-btn');
@@ -152,31 +155,23 @@ addCardModalButton.addEventListener('click', () => {
   });
 
   //add card handler
-const addCardHandler = (e) => {
-  e.preventDefault();
-  const cardInstance = newCard( {
-    name: cardTitle.value, link: cardLink.value
-  }, '.card-template');
+/*const newCard = document.querySelector(".card-template"); .content.querySelector(".elements__card");*/
 
-  const cardElement = cardInstance.createCard();
 
-  list.prepend(cardElement);
-  toggleModalWindow(addCardModalWindow);
-};
-
-/*addCardSubmitButton.addEventListener('click', event => {
-  event.preventDefault();
-
-  list.prepend(newCard(cardTitle.value, cardLink.value));
-  cardTitle.value = "";
-  cardLink.value = "";
-  toggleModalWindow(addCardModalWindow);
-});*/
-
-addCardSubmitButton.addEventListener('submit', formSubmitHandler);
+form.addEventListener('submit', formSubmitHandler);
 addCardSubmitButton.addEventListener('click', () => {
-  list.prepend(newCard(cardTitle.value, cardLink.value));
-  cardTitle.value = "";
-  cardLink.value = "";
-  toggleModalWindow(addCardModalWindow);
+  if (addCardModalWindow.classList.contains('popup_is-open')) {
+    const cardElement = cardTemplate.cloneNode(true);
+    list.prepend(cardElement);
+    /*const cardImage = cardElement.querySelector(".elements__img");
+    const cardTitle = cardElement.querySelector(".elements__heading");
+    const cardLikeButton = cardElement.querySelector(".elements__like-btn");
+    const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
+*/
+    cardTitle.textContent = inputCardTitle.value;
+    cardLink.src = inputCardLink.value;
+    }
+  togglePopup(addCardModalWindow);
 });
+
+
