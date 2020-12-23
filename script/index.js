@@ -40,11 +40,6 @@ function togglePopup(modal) {
     inputName.value = profileName.textContent;
     inputDesc.value = profileDesc.textContent;
     }
-
-  /*if (addCardModalWindow.classList.contains('popup_is-open')) {
-    inputName.value = profileName.textContent;
-    inputDesc.value = profileDesc.textContent;
-    }*/
 }
 
 //profile form submit handler
@@ -156,6 +151,13 @@ addCardModalButton.addEventListener('click', () => {
 
 
 addCardSubmitButton.addEventListener('click', () => {
+
+ /* if (addCardModalWindow.classList.contains('popup_is-open')) {
+     inputCardTitle.value = cardTitle.textContent;
+     inputCardLink.value = cardLink.textContent;
+}
+togglePopup(addCardModalWindow);*/
+
     const cardElement = cardTemplate.cloneNode(true);
 
     const cardImage = cardElement.querySelector(".elements__img");
