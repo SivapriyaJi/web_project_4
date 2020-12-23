@@ -22,8 +22,8 @@ const profileDesc = document.querySelector('.profile__subheading');
 // form inputs
 const inputName = document.querySelector('.popup__input_type_name');
 const inputDesc = document.querySelector('.popup__input_type_desc');
-const inputCardTitle = document.querySelector('.popup__input_type_card-title');
-const inputCardLink = document.querySelector('.popup__input_type_url');
+const inputCardTitle = addCardModalWindow.querySelector('.popup__input_type_card-title');
+const inputCardLink = addCardModalWindow.querySelector('.popup__input_type_url');
 
 
 //card
@@ -162,17 +162,54 @@ form.addEventListener('submit', formSubmitHandler);
 addCardSubmitButton.addEventListener('click', () => {
   if (addCardModalWindow.classList.contains('popup_is-open')) {
     const cardElement = cardTemplate.cloneNode(true);
-    list.prepend(cardElement);/*
-    /*const cardImage = cardElement.querySelector(".elements__img");
+    const cardImage = cardElement.querySelector(".elements__img");
     const cardTitle = cardElement.querySelector(".elements__heading");
     const cardLikeButton = cardElement.querySelector(".elements__like-btn");
     const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
-
     cardTitle.textContent = inputCardTitle.value;
     cardLink.src = inputCardLink.value;
     }
   togglePopup(addCardModalWindow);
-});*/
+  //list.prepend(cardElement);
+//});*/
+addCardSubmitButton.addEventListener('click', () => {
+      // this line a little bit unclear, are you sure you're getting here relevant fields from your popup?
+    const cardElement = cardTemplate.cloneNode(true);
+
+    const cardImage = cardElement.querySelector(".elements__img");
+    const cardTitle = cardElement.querySelector(".elements__heading");
+    const cardLikeButton = cardElement.querySelector(".elements__like-btn");
+    const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
+
+      // you're setting your fields for already prepended element
+      cardTitle.textContent = inputCardTitle.value;
+      //cardLink.src = inputCardLink.value;
+      cardImage.src = inputCardLink.value;
+
+     //cardTitle.textContent = data.name;
+     //cardImage.src = data.link;
+
+     function toggleLike() {
+       cardLikeButton.classList.toggle('elements__like-btn_active');
+     };
+
+     cardLikeButton.addEventListener('click', () => {
+       toggleLike();
+     });
+
+     cardDeleteButton.addEventListener('click', () => {
+       cardElement.remove();
+     });
+
+    // you're prepending your list, here everything seems to be fine
+    list.prepend(cardElement);
+
+
+  togglePopup(addCardModalWindow);
+});
+
+/* this is the one I'm trying to make work
+form.addEventListener('submit', formSubmitHandler);
 addCardSubmitButton.addEventListener('click', () => {
 function createCard(card){
   const cardElement = cardTemplate.cloneNode(true)
@@ -185,8 +222,8 @@ function createCard(card){
   cardElement.querySelector(".elements__delete-btn").addEventListener("click", deleteImage)
   places.prepend(cardElement)
 }
-createCard(card)
-});
+createCard(card);
+});*/
 
 
 
