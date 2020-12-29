@@ -180,6 +180,17 @@ togglePopup(addCardModalWindow);*/
        cardElement.remove();
      });
 
+     cardImage.addEventListener('click', () => {
+      const popupImage = imageModalWindow.querySelector('.popup__image');
+      const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
+
+      popupImage.src = inputCardLink.value;
+      popupImageTitle.textContent = inputCardTitle.value;
+
+      togglePopup(imageModalWindow)
+     //imageModalWindow.classList.add('popup_is-open')
+    });
+
     list.prepend(cardElement);
 
   togglePopup(addCardModalWindow);
