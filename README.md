@@ -12,4 +12,4 @@
 * Site built using html, css and javascript.
 
 
-[Link to Web Project 4!](https://sivapriyaji.github.io/web_project_4//)
+[Link to Web Project 4!](https://sivapriyaji.github.io/web_project_4/)
