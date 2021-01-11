@@ -20,10 +20,10 @@
   align-items: center;
   justify-content: center;
   /*display: none;*/
-  /*display: flex;*/
+  display: flex;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in-out;
 
 }
 
