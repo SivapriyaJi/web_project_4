@@ -104,6 +104,7 @@ addCardModalButton.addEventListener('click', () => {
     }
   ];
 
+/*
   const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__card");
   const list = document.querySelector(".elements__grid");
 
@@ -150,14 +151,14 @@ addCardModalButton.addEventListener('click', () => {
   });
 
 
-addCardSubmitButton.addEventListener('click', () => {
-
+addCardSubmitButton.addEventListener('click', (evt) => {
+   evt.preventDefault();
  /* if (addCardModalWindow.classList.contains('popup_is-open')) {
      inputCardTitle.value = cardTitle.textContent;
      inputCardLink.value = cardLink.textContent;
 }
 togglePopup(addCardModalWindow);*/
-
+/*
     const cardElement = cardTemplate.cloneNode(true);
 
     const cardImage = cardElement.querySelector(".elements__img");
@@ -194,7 +195,67 @@ togglePopup(addCardModalWindow);*/
     list.prepend(cardElement);
 
   togglePopup(addCardModalWindow);
+});*/
+
+function createCard(data) {
+  // here we do everything required for creating a card
+  const cardTemplate = document.querySelector(".card-template").content.querySelector(".elements__card");
+  const list = document.querySelector(".elements__grid");
+
+    const cardElement = cardTemplate.cloneNode(true);
+
+    const cardImage = cardElement.querySelector(".elements__img");
+    const cardTitle = cardElement.querySelector(".elements__heading");
+    const cardLikeButton = cardElement.querySelector(".elements__like-btn");
+    const cardDeleteButton = cardElement.querySelector(".elements__delete-btn");
+
+    cardTitle.textContent = data.name;
+    cardImage.src = data.link;
+
+    function toggleLike() {
+      cardLikeButton.classList.toggle('elements__like-btn_active');
+    };
+
+    cardLikeButton.addEventListener('click', () => {
+      toggleLike();
+    });
+
+    cardDeleteButton.addEventListener('click', () => {
+      cardElement.remove();
+    });
+
+    cardImage.addEventListener('click', () => {
+      const popupImage = imageModalWindow.querySelector('.popup__image');
+      const popupImageTitle = imageModalWindow.querySelector('.popup__image-title');
+
+      popupImage.src = data.link;
+      popupImageTitle.textContent = data.name;
+
+      togglePopup(imageModalWindow)
+     //imageModalWindow.classList.add('popup_is-open')
+    })
+
+    list.prepend(cardElement);
+  }
+
+  imagePopupCloseButton.addEventListener('click', () => {
+    togglePopup(imageModalWindow)
+  });
+
+
+initialCards.forEach(data => createCard(data)); // we use the function above for each of the initial cards
+
+addCardSubmitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+// Dont forget that you need to select inputName and inputLink inputs from modal with card addition
+    /*cardTitle.textContent = inputCardTitle.value;
+    cardImage.src = inputCardLink.value;*/
+
+    createCard({name: inputCardTitle.value, link: inputCardLink.value});
+// we also use our createCard function when user adds a new card
+  togglePopup(addCardModalWindow);
 });
+
 
 
 
