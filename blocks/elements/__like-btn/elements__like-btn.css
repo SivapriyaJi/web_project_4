@@ -11,6 +11,7 @@
 
 .elements__like-btn:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .elements__like-btn_active {

@@ -13,4 +13,7 @@
 
 .elements__delete-btn:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
+
+
