@@ -159,7 +159,6 @@ function createCard(data) {
   addCardSubmitButton.addEventListener('click', (evt) => {
     evt.preventDefault();
     createCard({name: inputCardTitle.value, link: inputCardLink.value});
-   // list.prepend(cardElement);
     togglePopup(addCardModalWindow);
   })
 /*
